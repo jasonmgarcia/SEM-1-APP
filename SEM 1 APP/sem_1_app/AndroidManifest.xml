@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+      android:versionCode="1"
+      android:versionName="1.1" package="io.appery.project213896">
+    <!-- GCM requires Android SDK version 2.2 (API level 8) or above. -->
+    <uses-sdk android:minSdkVersion="8" android:targetSdkVersion="8"/>
+
+
+	<supports-screens android:largeScreens="true"
+		android:normalScreens="true" android:smallScreens="true"
+		android:resizeable="true" android:anyDensity="true" />
+	
+    <permission android:name="io.appery.project213896.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+    <!-- Creates a custom permission so only this app can receive its messages. -->
+    <uses-permission android:name="io.appery.project213896.permission.C2D_MESSAGE" />
+	
+    
+	<uses-permission android:name="android.permission.ACCESS_CHECKIN_PROPERTIES" />
+	<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+	<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+	<uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+	<uses-permission android:name="android.permission.ACCESS_MOCK_LOCATION" />
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+	<uses-permission android:name="android.permission.ACCESS_SURFACE_FLINGER" />
+	<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+	<uses-permission android:name="android.permission.ACCOUNT_MANAGER" />
+	<uses-permission android:name="android.permission.AUTHENTICATE_ACCOUNTS" />
+	<uses-permission android:name="android.permission.BATTERY_STATS" />
+	<uses-permission android:name="android.permission.BIND_APPWIDGET" />
+	<uses-permission android:name="android.permission.BIND_DEVICE_ADMIN" />
+	<uses-permission android:name="android.permission.BIND_INPUT_METHOD" />
+	<uses-permission android:name="android.permission.BIND_WALLPAPER" />
+	<uses-permission android:name="android.permission.BLUETOOTH" />
+	<uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+	<uses-permission android:name="android.permission.BRICK" />
+	<uses-permission android:name="android.permission.BROADCAST_PACKAGE_REMOVED" />
+	<uses-permission android:name="android.permission.BROADCAST_SMS" />
+	<uses-permission android:name="android.permission.BROADCAST_STICKY" />
+	<uses-permission android:name="android.permission.BROADCAST_WAP_PUSH" />
+	<uses-permission android:name="android.permission.CALL_PHONE" />
+	<uses-permission android:name="android.permission.CALL_PRIVILEGED" />
+	<uses-permission android:name="android.permission.CAMERA" />
+	<uses-permission android:name="android.permission.CHANGE_COMPONENT_ENABLED_STATE" />
+	<uses-permission android:name="android.permission.CHANGE_CONFIGURATION" />
+	<uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+	<uses-permission android:name="android.permission.CHANGE_WIFI_MULTICAST_STATE" />
+	<uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+	<uses-permission android:name="android.permission.CLEAR_APP_CACHE" />
+	<uses-permission android:name="android.permission.CLEAR_APP_USER_DATA" />
+	<uses-permission android:name="android.permission.CONTROL_LOCATION_UPDATES" />
+	<uses-permission android:name="android.permission.DELETE_CACHE_FILES" />
+	<uses-permission android:name="android.permission.DELETE_PACKAGES" />
+	<uses-permission android:name="android.permission.DEVICE_POWER" />
+	<uses-permission android:name="android.permission.DIAGNOSTIC" />
+	<uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+	<uses-permission android:name="android.permission.DUMP" />
+	<uses-permission android:name="android.permission.EXPAND_STATUS_BAR" />
+	<uses-permission android:name="android.permission.FACTORY_TEST" />
+	<uses-permission android:name="android.permission.FLASHLIGHT" />
+	<uses-permission android:name="android.permission.FORCE_BACK" />
+	<uses-permission android:name="android.permission.GET_ACCOUNTS" />
+	<uses-permission android:name="android.permission.GET_PACKAGE_SIZE" />
+	<uses-permission android:name="android.permission.GET_TASKS" />
+	<uses-permission android:name="android.permission.GLOBAL_SEARCH" />
+	<uses-permission android:name="android.permission.HARDWARE_TEST" />
+	<uses-permission android:name="android.permission.INJECT_EVENTS" />
+	<uses-permission android:name="android.permission.INSTALL_LOCATION_PROVIDER" />
+	<uses-permission android:name="android.permission.INSTALL_PACKAGES" />
+	<uses-permission android:name="android.permission.INTERNAL_SYSTEM_WINDOW" />
+	<uses-permission android:name="android.permission.INTERNET" />
+	<uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES" />
+	<uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
+	<uses-permission android:name="android.permission.MANAGE_APP_TOKENS" />
+	<uses-permission android:name="android.permission.MASTER_CLEAR" />
+	<uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+	<uses-permission android:name="android.permission.MODIFY_PHONE_STATE" />
+	<uses-permission android:name="android.permission.MOUNT_FORMAT_FILESYSTEMS" />
+	<uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+	<uses-permission android:name="android.permission.PERSISTENT_ACTIVITY" />
+	<uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS" />
+	<uses-permission android:name="android.permission.READ_CALENDAR" />
+	<uses-permission android:name="android.permission.READ_CONTACTS" />
+	<uses-permission android:name="android.permission.READ_FRAME_BUFFER" />
+	<uses-permission android:name="com.android.browser.permission.READ_HISTORY_BOOKMARKS" />
+	<uses-permission android:name="android.permission.READ_INPUT_STATE" />
+	<uses-permission android:name="android.permission.READ_LOGS" />
+	<uses-permission android:name="android.permission.READ_PHONE_STATE" />
+	<uses-permission android:name="android.permission.READ_SMS" />
+	<uses-permission android:name="android.permission.READ_SYNC_SETTINGS" />
+	<uses-permission android:name="android.permission.READ_SYNC_STATS" />
+	<uses-permission android:name="android.permission.REBOOT" />
+	<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+	<uses-permission android:name="android.permission.RECEIVE_MMS" />
+	<uses-permission android:name="android.permission.RECEIVE_SMS" />
+	<uses-permission android:name="android.permission.RECEIVE_WAP_PUSH" />
+	<uses-permission android:name="android.permission.RECORD_AUDIO" />
+	<uses-permission android:name="android.permission.REORDER_TASKS" />
+	<uses-permission android:name="android.permission.RESTART_PACKAGES" />
+	<uses-permission android:name="android.permission.SEND_SMS" />
+	<uses-permission android:name="android.permission.SET_ACTIVITY_WATCHER" />
+	<uses-permission android:name="android.permission.SET_ALWAYS_FINISH" />
+	<uses-permission android:name="android.permission.SET_ANIMATION_SCALE" />
+	<uses-permission android:name="android.permission.SET_DEBUG_APP" />
+	<uses-permission android:name="android.permission.SET_ORIENTATION" />
+	<uses-permission android:name="android.permission.SET_PREFERRED_APPLICATIONS" />
+	<uses-permission android:name="android.permission.SET_PROCESS_LIMIT" />
+	<uses-permission android:name="android.permission.SET_TIME" />
+	<uses-permission android:name="android.permission.SET_TIME_ZONE" />
+	<uses-permission android:name="android.permission.SET_WALLPAPER" />
+	<uses-permission android:name="android.permission.SET_WALLPAPER_HINTS" />
+	<uses-permission android:name="android.permission.SIGNAL_PERSISTENT_PROCESSES" />
+	<uses-permission android:name="android.permission.STATUS_BAR" />
+	<uses-permission android:name="android.permission.SUBSCRIBED_FEEDS_READ" />
+	<uses-permission android:name="android.permission.SUBSCRIBED_FEEDS_WRITE" />
+	<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+	<uses-permission android:name="android.permission.UPDATE_DEVICE_STATS" />
+	<uses-permission android:name="android.permission.USE_CREDENTIALS" />
+	<uses-permission android:name="android.permission.VIBRATE" />
+	<uses-permission android:name="android.permission.WAKE_LOCK" />
+	<uses-permission android:name="android.permission.WRITE_APN_SETTINGS" />
+	<uses-permission android:name="android.permission.WRITE_CALENDAR" />
+	<uses-permission android:name="android.permission.WRITE_CONTACTS" />
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+	<uses-permission android:name="android.permission.WRITE_GSERVICES" />
+	<uses-permission android:name="com.android.browser.permission.WRITE_HISTORY_BOOKMARKS" />
+	<uses-permission android:name="android.permission.WRITE_SECURE_SETTINGS" />
+	<uses-permission android:name="android.permission.WRITE_SETTINGS" />
+	<uses-permission android:name="android.permission.WRITE_SMS" />
+	<uses-permission android:name="android.permission.WRITE_SYNC_SETTINGS" />	
+	
+	<application android:icon="@drawable/icon" android:label="@string/app_name" android:debuggable="true">
+		<activity android:name=".PhoneGapActivity" android:launchMode="singleTop" android:configChanges="orientation|keyboardHidden">
+		    <intent-filter>
+				<action android:name="io.appery.project213896.MESSAGE"/>
+				<category android:name="android.intent.category.DEFAULT"/>
+         	</intent-filter>
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="android.intent.category.LAUNCHER" />
+			</intent-filter>
+		</activity>
+		<activity android:name="org.apache.cordova.DroidGap" android:label="@string/app_name">
+			<intent-filter>
+			</intent-filter>
+		</activity>
+		<!-- ZXing activities -->
+		<activity android:name="com.google.zxing.client.android.CaptureActivity"
+			android:screenOrientation="landscape" android:configChanges="orientation|keyboardHidden"
+			android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+			android:windowSoftInputMode="stateAlwaysHidden"
+			>
+			<intent-filter>
+				<action android:name="io.appery.project213896.barcodescanner.SCAN" />
+				<category android:name="android.intent.category.DEFAULT" />
+			</intent-filter>
+		</activity>		
+		<activity android:name="com.google.zxing.client.android.HelpActivity"
+              android:screenOrientation="user">
+      		<intent-filter>
+        		<action android:name="android.intent.action.VIEW"/>
+        		<category android:name="android.intent.category.DEFAULT"/>
+      		</intent-filter>
+    	</activity>
+    	 <activity android:name="com.google.zxing.client.android.PreferencesActivity">
+    	</activity>
+    	<activity android:name="com.google.zxing.client.android.share.ShareActivity"              
+              android:screenOrientation="user"    >
+      		<intent-filter>
+        		<action android:name="com.google.zxing.client.android.SHARE"/>
+        		<category android:name="android.intent.category.DEFAULT"/>
+      		</intent-filter>
+	      </activity>
+	      <activity android:name="com.google.zxing.client.android.encode.EncodeActivity" >
+	      		<intent-filter>
+	        		<action android:name="io.appery.project213896.barcodescanner.ENCODE"/>
+	        		<category android:name="android.intent.category.DEFAULT"/>
+	      		</intent-filter>
+	      <!-- This allows us to handle the Share button in Contacts. -->
+	      		<intent-filter>
+	        		<action android:name="android.intent.action.SEND"/>
+	        		<category android:name="android.intent.category.DEFAULT"/>
+	        		<data android:mimeType="text/x-vcard"/>
+	      		</intent-filter>
+	      <!-- This allows us to handle sharing any plain text . -->
+	      		<intent-filter>
+	        		<action android:name="android.intent.action.SEND"/>
+	        		<category android:name="android.intent.category.DEFAULT"/>
+	        		<data android:mimeType="text/plain"/>
+	      		</intent-filter>
+	    </activity>	
+		<activity android:name="com.google.zxing.client.android.book.SearchBookContentsActivity"              
+	              android:screenOrientation="landscape"
+	              android:configChanges="orientation|keyboardHidden">
+	      		<intent-filter>
+	        		<action android:name="com.google.zxing.client.android.SEARCH_BOOK_CONTENTS"/>
+	        		<category android:name="android.intent.category.DEFAULT"/>
+	      		</intent-filter>
+	    </activity>
+	    <activity android:name="com.google.zxing.client.android.wifi.WifiActivity"              
+	              android:screenOrientation="landscape"
+	              android:configChanges="orientation|keyboardHidden">
+	    </activity>	
+		<activity android:name="com.google.zxing.client.android.share.BookmarkPickerActivity">
+	      		<intent-filter>
+	        		<action android:name="android.intent.action.PICK"/>
+	        		<category android:name="android.intent.category.DEFAULT"/>
+	      		</intent-filter>
+	    </activity>	
+		<activity android:name="com.google.zxing.client.android.share.AppPickerActivity"              
+	              android:configChanges="orientation">
+	      		<intent-filter>
+	        		<action android:name="android.intent.action.PICK"/>
+	        		<category android:name="android.intent.category.DEFAULT"/>
+	      		</intent-filter>
+	    </activity>   
+	    <!-- Push notifications message activity -->
+	    <activity android:name="com.phonegap.plugins.pushnotifications.gcm.MessageActivity"/>
+	    
+	    <!--
+          BroadcastReceiver that will receive intents from GCM
+          services and handle them to the custom IntentService.
+
+          The com.google.android.c2dm.permission.SEND permission is necessary
+          so only GCM services can send data messages for the app.
+        -->
+        <receiver
+            android:name="com.google.android.gcm.GCMBroadcastReceiver"
+            android:permission="com.google.android.c2dm.permission.SEND" >
+            <intent-filter>
+                <!-- Receives the actual messages. -->
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <!-- Receives the registration id. -->
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+                <category android:name="io.appery.project213896" />
+            </intent-filter>
+        </receiver>
+
+        <!--
+          Application-specific subclass of GCMBaseIntentService that will
+          handle received messages.
+
+          By default, it must be named .GCMIntentService, unless the
+          application uses a custom BroadcastReceiver that redefines its name.
+        -->
+        <service android:name=".GCMIntentService" />
+	</application>
+
+</manifest>

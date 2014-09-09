@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <title>
+            loginScreen
+        </title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name="viewport" content="initial-scale=1" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+        <meta name="msapplication-tap-highlight" content="no" />
+        <link href="files/resources/lib/theme/jqm/jqm.css" rel="stylesheet" />
+        <link href="files/resources/lib/theme/flat-ui/flat-ui.css" rel="stylesheet" />
+        <link href="files/resources/lib/jquerymobile/1.4.2/jquery.mobile.structure-1.4.2.css"
+        rel="stylesheet" />
+        <script type="text/javascript" src="files/resources/lib/store/json2.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/jquery/jquery-1.9.1.js">
+        </script>
+        <script type="text/javascript">
+                    $(document).bind("mobileinit", function()
+            {
+                if (navigator.userAgent.toLowerCase().indexOf("android") != -1)
+                {
+                    $.mobile.defaultPageTransition = 'none';
+                    $.mobile.defaultDialogTransition = 'none';
+                }
+                if (navigator.userAgent.toLowerCase().indexOf("msie") != -1)
+                {
+                    $.mobile.allowCrossDomainPages = true;
+                    $.support.cors = true;
+                }
+            });
+        </script>
+        <script type="text/javascript" src="files/resources/lib/jquerymobile/1.4.2/jquery.mobile-1.4.2.js">
+        </script>
+        <script type="text/javascript" src="files/resources/js/mobilebase.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/event/customEventHandler.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/base/sha1.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/base/oauth.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/base/contexts.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/base/jsonpath.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/base/jquery.xml2json.min.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/base/appery.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/get_target_platform.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/cordova.js">
+        </script>
+        <link href="files/resources/css/mobilebase.css" rel="stylesheet" type="text/css"
+        />
+        <script type="text/javascript" src="files/views/assets/js/services/service.js">
+        </script>
+        <link href="loginScreen.css" rel="stylesheet" type="text/css" />
+        <script type="text/javascript" src="loginScreen.js">
+        </script>
+    </head>
+    
+    <body>
+        <div data-role="page" style="min-height:480px;" dsid="loginScreen" id="loginScreen"
+        class="type-interior" data-theme="f">
+            <!-- mobileheader1 -->
+            <div data-role="header" data-position="fixed" data-add-back-btn="false" data-back-btn-text="Back"
+            data-theme="f" name="mobileheader1" id="loginScreen_mobileheader1" class="loginScreen_mobileheader1">
+                <h1 dsid="mobileheader1">
+                    Login
+                </h1>
+            </div>
+            <!-- mobilecontainer1 -->
+            <div data-role="content" id="loginScreen_mobilecontainer1" name="mobilecontainer1"
+            class="loginScreen_mobilecontainer1 ui-content" dsid="mobilecontainer1" data-theme="f">
+                <!-- mobiletextinput_2 -->
+                <div data-role="fieldcontain" class="loginScreen_mobiletextinput_2 ">
+                    <input type="text" name="mobiletextinput_2" dsid="mobiletextinput_2" value="" placeholder="Username"
+                    id="loginScreen_mobiletextinput_2" tabindex="1" multiple data-theme="f" class="loginScreen_mobiletextinput_2"
+                    />
+                </div>
+                <!-- mobiletextinput_3 -->
+                <div data-role="fieldcontain" class="loginScreen_mobiletextinput_3 ">
+                    <input type="text" name="mobiletextinput_3" dsid="mobiletextinput_3" value="" placeholder="Password"
+                    id="loginScreen_mobiletextinput_3" tabindex="2" multiple data-theme="f" class="loginScreen_mobiletextinput_3"
+                    />
+                </div>
+                <!-- mobilegrid_19 -->
+                <div class="loginScreen_mobilegrid_19_wrapper" data-wrapper-for="mobilegrid_19">
+                    <table id="loginScreen_mobilegrid_19" class="loginScreen_mobilegrid_19" dsid="mobilegrid_19"
+                    name="mobilegrid_19" cellpadding=0 cellspacing=0>
+                        <col style="width:auto;" />
+                        <col style="width:auto;" />
+                        <tr class="loginScreen_mobilegrid_19_row_0">
+                            <!-- mobilegridcell_20 -->
+                            <td id="loginScreen_mobilegridcell_20" name="mobilegridcell_20" class="loginScreen_mobilegridcell_20"
+                            colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- mobilebutton_24 -->
+                                    <a data-role="button" name="mobilebutton_24" dsid="mobilebutton_24" class="loginScreen_mobilebutton_24"
+                                    id="loginScreen_mobilebutton_24" data-corners="true" data-icon="none" data-iconpos='nowhere'
+                                    data-mini="false" data-theme="f" tabindex="8">
+                                    Login
+                                    </a>
+                                </div>
+                            </td>
+                            <!-- mobilegridcell_21 -->
+                            <td id="loginScreen_mobilegridcell_21" name="mobilegridcell_21" class="loginScreen_mobilegridcell_21"
+                            colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- mobilebutton_18 -->
+                                    <a data-role="button" name="mobilebutton_18" dsid="mobilebutton_18" class="loginScreen_mobilebutton_18"
+                                    id="loginScreen_mobilebutton_18" data-corners="true" data-icon="none" data-iconpos='nowhere'
+                                    data-mini="false" data-theme="f" tabindex="7">
+                                    Sign - up
+                                    </a>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="loginScreen_mobilegrid_19_row_1">
+                            <!-- mobilegridcell_22 -->
+                            <td id="loginScreen_mobilegridcell_22" name="mobilegridcell_22" class="loginScreen_mobilegridcell_22"
+                            colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                </div>
+                            </td>
+                            <!-- mobilegridcell_23 -->
+                            <td id="loginScreen_mobilegridcell_23" name="mobilegridcell_23" class="loginScreen_mobilegridcell_23"
+                            colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div data-role="page" style="min-height:480px;" dsid="addSubject" id="addSubject"
+        class="type-interior" data-theme="f">
+            <!-- mobileheader -->
+            <div data-role="header" data-position="fixed" data-add-back-btn="true" data-back-btn-text="Back"
+            data-theme="f" name="mobileheader" id="addSubject_mobileheader" class="addSubject_mobileheader">
+                <h1 dsid="mobileheader">
+                    Add Course
+                </h1>
+            </div>
+            <!-- mobilecontainer -->
+            <div data-role="content" id="addSubject_mobilecontainer" name="mobilecontainer"
+            class="addSubject_mobilecontainer ui-content" dsid="mobilecontainer" data-theme="f">
+                <!-- mobilegrid_5 -->
+                <div class="addSubject_mobilegrid_5_wrapper" data-wrapper-for="mobilegrid_5">
+                    <table id="addSubject_mobilegrid_5" class="addSubject_mobilegrid_5" dsid="mobilegrid_5"
+                    name="mobilegrid_5" cellpadding=0 cellspacing=0>
+                        <col style="width:auto;" />
+                        <col style="width:auto;" />
+                        <tr class="addSubject_mobilegrid_5_row_0">
+                            <!-- mobilegridcell_6 -->
+                            <td id="addSubject_mobilegridcell_6" name="mobilegridcell_6" class="addSubject_mobilegridcell_6"
+                            colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- mobilelabel_10 -->
+                                    <div name="mobilelabel_10" id="addSubject_mobilelabel_10" dsid="mobilelabel_10"
+                                    data-role="appery_label" class="addSubject_mobilelabel_10">
+                                        Course Name:
+                                    </div>
+                                </div>
+                            </td>
+                            <!-- mobilegridcell_7 -->
+                            <td id="addSubject_mobilegridcell_7" name="mobilegridcell_7" class="addSubject_mobilegridcell_7"
+                            colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- mobiletextinput_11 -->
+                                    <div data-role="fieldcontain" class="addSubject_mobiletextinput_11 ">
+                                        <input type="text" name="mobiletextinput_11" dsid="mobiletextinput_11" value=""
+                                        placeholder="" id="addSubject_mobiletextinput_11" tabindex="3" multiple data-theme="f"
+                                        class="addSubject_mobiletextinput_11" />
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="addSubject_mobilegrid_5_row_1">
+                            <!-- mobilegridcell_8 -->
+                            <td id="addSubject_mobilegridcell_8" name="mobilegridcell_8" class="addSubject_mobilegridcell_8"
+                            colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- mobilelabel_22 -->
+                                    <div name="mobilelabel_22" id="addSubject_mobilelabel_22" dsid="mobilelabel_22"
+                                    data-role="appery_label" class="addSubject_mobilelabel_22">
+                                        Days:
+                                    </div>
+                                    <!-- mobilebutton_79 -->
+                                    <a data-role="button" name="mobilebutton_79" dsid="mobilebutton_79" class="addSubject_mobilebutton_79"
+                                    id="addSubject_mobilebutton_79" data-corners="true" data-icon="none" data-iconpos='nowhere'
+                                    data-mini="false" data-theme="f" tabindex="19">
+                                    Add
+                                    </a>
+                                </div>
+                            </td>
+                            <!-- mobilegridcell_9 -->
+                            <td id="addSubject_mobilegridcell_9" name="mobilegridcell_9" class="addSubject_mobilegridcell_9"
+                            colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- mobilelabel_42 -->
+                                    <div name="mobilelabel_42" id="addSubject_mobilelabel_42" dsid="mobilelabel_42"
+                                    data-role="appery_label" class="addSubject_mobilelabel_42">
+                                        Time:
+                                    </div>
+                                    <!-- mobilegrid_50 -->
+                                    <div class="addSubject_mobilegrid_50_wrapper" data-wrapper-for="mobilegrid_50">
+                                        <table id="addSubject_mobilegrid_50" class="addSubject_mobilegrid_50" dsid="mobilegrid_50"
+                                        name="mobilegrid_50" cellpadding=0 cellspacing=0>
+                                            <col style="width:auto;" />
+                                            <col style="width:auto;" />
+                                            <tr class="addSubject_mobilegrid_50_row_0">
+                                                <!-- mobilegridcell_51 -->
+                                                <td id="addSubject_mobilegridcell_51" name="mobilegridcell_51" class="addSubject_mobilegridcell_51"
+                                                colspan=1 rowspan=1>
+                                                    <div class="cell-wrapper">
+                                                        <!-- mobiletextinput_43 -->
+                                                        <div data-role="fieldcontain" class="addSubject_mobiletextinput_43 ">
+                                                            <input type="text" name="mobiletextinput_43" dsid="mobiletextinput_43" value=""
+                                                            placeholder="e.g. 7:00" id="addSubject_mobiletextinput_43" tabindex="11" multiple
+                                                            data-theme="f" class="addSubject_mobiletextinput_43" />
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <!-- mobilegridcell_52 -->
+                                                <td id="addSubject_mobilegridcell_52" name="mobilegridcell_52" class="addSubject_mobilegridcell_52"
+                                                colspan=1 rowspan=1>
+                                                    <div class="cell-wrapper">
+                                                        <!-- ampm_48 -->
+                                                        <div id="addSubject_ampm_48" class="tiggzi-mobiletemplate addSubject_ampm_48" dsid="ampm_48"
+                                                        tiggzitype="mobiletemplate" apperytype="mobiletemplate">
+                                                            <!-- ampm_48_mobileselectmenu_46 -->
+                                                            <div data-role="fieldcontain" class="addSubject_ampm_48_mobileselectmenu_46 ">
+                                                                <select name="ampm_48_mobileselectmenu_46" id="addSubject_ampm_48_mobileselectmenu_46"
+                                                                dsid="ampm_48_mobileselectmenu_46" data-theme="f" data-inline="false" data-mini="true"
+                                                                data-icon="arrow-d" data-iconpos="right" data-native-menu="false" tabindex="13" appery-class="addSubject_ampm_48_mobileselectmenu_46">
+                                                                    <option id="addSubject_ampm_48_mobileselectmenu_46-0" value="AM" reRender="ampm_48_mobileselectmenu_46"
+                                                                    dsid="ampm_48_mobileselectmenu_46-0" selected="selected">
+                                                                        AM
+                                                                    </option>
+                                                                    <option id="addSubject_ampm_48_mobileselectmenu_46-1" value="PM" reRender="ampm_48_mobileselectmenu_46"
+                                                                    dsid="ampm_48_mobileselectmenu_46-1">
+                                                                        PM
+                                                                    </option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr class="addSubject_mobilegrid_50_row_1">
+                                                <!-- mobilegridcell_53 -->
+                                                <td id="addSubject_mobilegridcell_53" name="mobilegridcell_53" class="addSubject_mobilegridcell_53"
+                                                colspan=1 rowspan=1>
+                                                    <div class="cell-wrapper">
+                                                        <!-- mobiletextinput_45 -->
+                                                        <div data-role="fieldcontain" class="addSubject_mobiletextinput_45 ">
+                                                            <input type="text" name="mobiletextinput_45" dsid="mobiletextinput_45" value=""
+                                                            placeholder="e.g. 8:00" id="addSubject_mobiletextinput_45" tabindex="12" multiple
+                                                            data-theme="f" class="addSubject_mobiletextinput_45" />
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <!-- mobilegridcell_54 -->
+                                                <td id="addSubject_mobilegridcell_54" name="mobilegridcell_54" class="addSubject_mobilegridcell_54"
+                                                colspan=1 rowspan=1>
+                                                    <div class="cell-wrapper">
+                                                        <!-- ampm_49 -->
+                                                        <div id="addSubject_ampm_49" class="tiggzi-mobiletemplate addSubject_ampm_49" dsid="ampm_49"
+                                                        tiggzitype="mobiletemplate" apperytype="mobiletemplate">
+                                                            <!-- ampm_49_mobileselectmenu_46 -->
+                                                            <div data-role="fieldcontain" class="addSubject_ampm_49_mobileselectmenu_46 ">
+                                                                <select name="ampm_49_mobileselectmenu_46" id="addSubject_ampm_49_mobileselectmenu_46"
+                                                                dsid="ampm_49_mobileselectmenu_46" data-theme="f" data-inline="false" data-mini="true"
+                                                                data-icon="arrow-d" data-iconpos="right" data-native-menu="false" tabindex="13" appery-class="addSubject_ampm_49_mobileselectmenu_46">
+                                                                    <option id="addSubject_ampm_49_mobileselectmenu_46-0" value="AM" reRender="ampm_49_mobileselectmenu_46"
+                                                                    dsid="ampm_49_mobileselectmenu_46-0" selected="selected">
+                                                                        AM
+                                                                    </option>
+                                                                    <option id="addSubject_ampm_49_mobileselectmenu_46-1" value="PM" reRender="ampm_49_mobileselectmenu_46"
+                                                                    dsid="ampm_49_mobileselectmenu_46-1">
+                                                                        PM
+                                                                    </option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <!-- mobilegrid_105 -->
+                <div class="addSubject_mobilegrid_105_wrapper" data-wrapper-for="mobilegrid_105">
+                    <table id="addSubject_mobilegrid_105" class="addSubject_mobilegrid_105" dsid="mobilegrid_105"
+                    name="mobilegrid_105" cellpadding=0 cellspacing=0>
+                        <col style="width:auto;" />
+                        <col style="width:auto;" />
+                        <tr class="addSubject_mobilegrid_105_row_0">
+                            <!-- mobilegridcell_106 -->
+                            <td id="addSubject_mobilegridcell_106" name="mobilegridcell_106" class="addSubject_mobilegridcell_106"
+                            colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                </div>
+                            </td>
+                            <!-- mobilegridcell_107 -->
+                            <td id="addSubject_mobilegridcell_107" name="mobilegridcell_107" class="addSubject_mobilegridcell_107"
+                            colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="addSubject_mobilegrid_105_row_1">
+                            <!-- mobilegridcell_108 -->
+                            <td id="addSubject_mobilegridcell_108" name="mobilegridcell_108" class="addSubject_mobilegridcell_108"
+                            colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- mobilelabel_104 -->
+                                    <div name="mobilelabel_104" id="addSubject_mobilelabel_104" dsid="mobilelabel_104"
+                                    data-role="appery_label" class="addSubject_mobilelabel_104">
+                                        Color
+                                    </div>
+                                </div>
+                            </td>
+                            <!-- mobilegridcell_109 -->
+                            <td id="addSubject_mobilegridcell_109" name="mobilegridcell_109" class="addSubject_mobilegridcell_109"
+                            colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- mobilebutton_113 -->
+                                    <a data-role="button" name="mobilebutton_113" dsid="mobilebutton_113" class="addSubject_mobilebutton_113"
+                                    id="addSubject_mobilebutton_113" data-corners="true" data-icon="none" data-iconpos='nowhere'
+                                    data-mini="false" data-theme="f" tabindex="27">
+                                    Choose
+                                    </a>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <!-- panel_80 -->
+            <div data-role="panel" tabindex="-1" data-position="left" data-display="push" id="addSubject_panel_80"
+            class="addSubject_panel_80" name="panel_80" dsid="panel_80" data-theme="f">
+                <div data-role="fieldcontain" class="addSubject_mobilecheckboxgroup_81" id="addSubject_mobilecheckboxgroup_81"
+                dsid="mobilecheckboxgroup_81">
+                    <fieldset data-role="controlgroup" data-theme="f" class="">
+                        <span dsid="mobilecheckbox_82" class="addSubject_mobilecheckbox_82" name="mobilecheckbox_82">
+                            <input type="checkbox" name="mobilecheckboxgroup_81" id="addSubject_mobilecheckbox_82"
+                            tabindex="20" value="Item 1" />
+                            <label id="addSubject_mobilecheckbox_82_label" for="addSubject_mobilecheckbox_82">
+                                Monday
+                            </label>
+                        </span>
+                        <span dsid="mobilecheckbox_83" class="addSubject_mobilecheckbox_83" name="mobilecheckbox_83">
+                            <input type="checkbox" name="mobilecheckboxgroup_81" id="addSubject_mobilecheckbox_83"
+                            tabindex="20" value="Item 2" />
+                            <label id="addSubject_mobilecheckbox_83_label" for="addSubject_mobilecheckbox_83">
+                                Tuesday
+                            </label>
+                        </span>
+                        <span dsid="mobilecheckbox_84" class="addSubject_mobilecheckbox_84" name="mobilecheckbox_84">
+                            <input type="checkbox" name="mobilecheckboxgroup_81" id="addSubject_mobilecheckbox_84"
+                            tabindex="20" value="Item 3" />
+                            <label id="addSubject_mobilecheckbox_84_label" for="addSubject_mobilecheckbox_84">
+                                Wednesday
+                            </label>
+                        </span>
+                        <span dsid="mobilecheckbox_97" class="addSubject_mobilecheckbox_97" name="mobilecheckbox_97">
+                            <input type="checkbox" name="mobilecheckboxgroup_81" id="addSubject_mobilecheckbox_97"
+                            tabindex="20" value="Item 4" />
+                            <label id="addSubject_mobilecheckbox_97_label" for="addSubject_mobilecheckbox_97">
+                                Thursday
+                            </label>
+                        </span>
+                        <span dsid="mobilecheckbox_98" class="addSubject_mobilecheckbox_98" name="mobilecheckbox_98">
+                            <input type="checkbox" name="mobilecheckboxgroup_81" id="addSubject_mobilecheckbox_98"
+                            tabindex="20" value="Item 5" />
+                            <label id="addSubject_mobilecheckbox_98_label" for="addSubject_mobilecheckbox_98">
+                                Friday
+                            </label>
+                        </span>
+                        <span dsid="mobilecheckbox_99" class="addSubject_mobilecheckbox_99" name="mobilecheckbox_99">
+                            <input type="checkbox" name="mobilecheckboxgroup_81" id="addSubject_mobilecheckbox_99"
+                            tabindex="20" value="Item 6" />
+                            <label id="addSubject_mobilecheckbox_99_label" for="addSubject_mobilecheckbox_99">
+                                Saturday
+                            </label>
+                        </span>
+                        <span dsid="mobilecheckbox_100" class="addSubject_mobilecheckbox_100" name="mobilecheckbox_100">
+                            <input type="checkbox" name="mobilecheckboxgroup_81" id="addSubject_mobilecheckbox_100"
+                            tabindex="20" value="Item 7" />
+                            <label id="addSubject_mobilecheckbox_100_label" for="addSubject_mobilecheckbox_100">
+                                Sunday
+                            </label>
+                        </span>
+                    </fieldset>
+                </div>
+                <!-- mobilebutton_101 -->
+                <a data-role="button" name="mobilebutton_101" dsid="mobilebutton_101" class="addSubject_mobilebutton_101"
+                style='min-height:20px; ' id="addSubject_mobilebutton_101" data-corners="true" data-icon="check"
+                data-iconpos="notext" data-mini="false" data-theme="f" tabindex="24">
+                &nbsp;
+                </a>
+            </div>
+            <!-- panel_110 -->
+            <div data-role="panel" tabindex="-1" data-position="left" data-display="overlay"
+            id="addSubject_panel_110" class="addSubject_panel_110" name="panel_110" dsid="panel_110"
+            data-theme="f">
+                <!-- mobileselectmenu_111 -->
+                <div data-role="fieldcontain" class="addSubject_mobileselectmenu_111 ">
+                    <select name="mobileselectmenu_111" id="addSubject_mobileselectmenu_111" dsid="mobileselectmenu_111"
+                    data-theme="f" data-inline="false" data-mini="false" data-icon="arrow-d" data-iconpos="right"
+                    data-native-menu="false" tabindex="26" appery-class="addSubject_mobileselectmenu_111">
+                        <option id="addSubject_mobileselectmenu_111-0" value="White" reRender="mobileselectmenu_111"
+                        dsid="mobileselectmenu_111-0" selected="selected">
+                            White
+                        </option>
+                        <option id="addSubject_mobileselectmenu_111-1" value="Red" reRender="mobileselectmenu_111"
+                        dsid="mobileselectmenu_111-1">
+                            Red
+                        </option>
+                        <option id="addSubject_mobileselectmenu_111-2" value="Blue" reRender="mobileselectmenu_111"
+                        dsid="mobileselectmenu_111-2">
+                            Blue
+                        </option>
+                    </select>
+                </div>
+                <!-- mobilebutton_114 -->
+                <a data-role="button" name="mobilebutton_114" dsid="mobilebutton_114" class="addSubject_mobilebutton_114"
+                style='min-height:20px; ' id="addSubject_mobilebutton_114" data-corners="true" data-icon="check"
+                data-iconpos="notext" data-mini="false" data-theme="f" tabindex="28">
+                Button
+                </a>
+            </div>
+        </div>
+        <div data-role="page" style="min-height:480px;" dsid="homeScreen" id="homeScreen"
+        class="type-interior" data-theme="f">
+            <!-- mobileheader -->
+            <div data-role="header" data-position="fixed" data-add-back-btn="true" data-back-btn-text="Log out"
+            data-theme="f" name="mobileheader" id="homeScreen_mobileheader" class="homeScreen_mobileheader">
+                <h1 dsid="mobileheader">
+                    Schedule
+                </h1>
+                <!-- mobilebutton_9 -->
+                <a data-role="button" name="mobilebutton_9" dsid="mobilebutton_9" class="homeScreen_mobilebutton_9 ui-btn-right"
+                style='min-height:20px; ' id="homeScreen_mobilebutton_9" data-corners="true" data-icon="plus"
+                data-iconpos="notext" data-inline='true' data-mini='true' data-theme="f" tabindex="2">
+                Button
+                </a>
+            </div>
+            <!-- mobilecontainer -->
+            <div data-role="content" id="homeScreen_mobilecontainer" name="mobilecontainer"
+            class="homeScreen_mobilecontainer ui-content" dsid="mobilecontainer" data-theme="f">
+                <!-- mobilelabel_10 -->
+                <div name="mobilelabel_10" id="homeScreen_mobilelabel_10" dsid="mobilelabel_10"
+                data-role="appery_label" class="homeScreen_mobilelabel_10">
+                    Subject goes here
+                </div>
+            </div>
+        </div>
+    </body>
+
+</html>
